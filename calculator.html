@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        table{
+            border: 2px solid black;
+            border-radius: 16px;
+            height: 415px;
+            width: 300px;
+        }
+
+        #equation{
+            height: 110px;
+            width: 100%;
+            margin-top: 10px;
+            border: none;
+            font-size:45px;
+            text-align: right;
+        }
+
+        #btn{
+           background-color: whitesmoke;
+           border: none;
+           height: 50px;
+           width: 50px;
+           font-size: 30px;
+           border-radius: 50%;
+           margin-left: 11px;
+        }
+
+        .allclear{
+           background-color: whitesmoke;
+           color: red;
+           border: none;
+           height: 50px;
+           width: 50px;
+           font-size: 25px;
+           border-radius: 50%;
+           margin-left: 11px;
+        }
+
+        .clear{
+           background-color: whitesmoke;
+           color: green;
+           border: none;
+           height: 50px;
+           width: 50px;
+           font-size: 30px;
+           border-radius: 50%;
+           margin-left: 11px;
+        }
+
+        .op{
+           background-color: whitesmoke;
+           color: green;
+           border: none;
+           height: 50px;
+           width: 50px;
+           font-size: 30px;
+           font-weight: bold;
+           border-radius: 50%;
+           margin-left: 11px;
+        }
+
+        .eql{
+           background-color: green;
+           color: white;
+           border: none;
+           height: 50px;
+           width: 50px;
+           font-size: 30px;
+           font-weight: bold;
+           border-radius: 50%;
+           margin-left: 11px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+        <tr>
+            <td colspan=4><input type="text" id="equation" placeholder="0" maxlength="10"></td>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td><input type=button value="AC" class="allclear" onclick="clearall()"></td>
+            <td><input type=button value="C" class="clear" onclick="clearone()"></td>
+            <td><input type=button value="%" class="op in"></td>
+            <td><input type=button value="/" class="op in"></td>
+        </tr>
+        <tr>
+            <td><input id="btn" type=button value="7" class="in"></td>
+            <td><input id="btn" type=button value="8" class="in"></td>
+            <td><input id="btn" type=button value="9" class="in"></td>
+            <td><input type=button value="*" class="op in"></td>
+        </tr>
+        <tr>
+            <td><input id="btn" type=button value="4" class="in"></td>
+            <td><input id="btn" type=button value="5" class="in"></td>
+            <td><input id="btn" type=button value="6" class="in"></td>
+            <td><input type=button value="-" class="op in"></td> 
+        </tr>
+        <tr>
+            <td><input id="btn" type=button value="1" class="in"></td>
+            <td><input id="btn" type=button value="2" class="in"></td>
+            <td><input id="btn" type=button value="3" class="in"></td>
+            <td><input type=button value="+" class="op in"></td> 
+        </tr>
+        <tr>
+            <td><input id="btn" type=button value="00" class="in"></td>
+            <td><input id="btn" type=button value="0" class="in"></td>
+            <td><input id="btn" type=button value="." class="in"></td>
+            <td><input type=button value="=" class="eql" onclick="solve()"></td>
+        </tr>
+        </tbody>
+   </table>
+
+   <script>
+    let eq = document.getElementById("equation");
+    let inputs = document.querySelectorAll('input.in');
+    console.log(inputs.length);
+
+    inputs.forEach(x=>{
+        console.log(x);
+        x.addEventListener("click",()=>{
+            eq.value += x.value;
+        })
+    })
+
+    function clearall() {
+        eq.value= "";
+    }
+
+    function solve() {
+        eq.value = eval(eq.value);
+    }
+
+    function clearone() {
+        eq.value = eq.value.slice(0,eq.value.length-1);
+    }
+   </script>
+</body>
+</html>
