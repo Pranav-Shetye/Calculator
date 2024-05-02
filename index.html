@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table>
+        <thead>
+        <tr>
+            <td colspan=4><input type="text" id="equation" placeholder="0" maxlength="10"></td>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td><input type=button value="AC" class="allclear" onclick="clearall()"></td>
+            <td><input type=button value="C" class="clear" onclick="clearone()"></td>
+            <td><input type=button value="%" class="op in"></td>
+            <td><input type=button value="/" class="op in"></td>
+        </tr>
+        <tr>
+            <td><input id="btn" type=button value="7" class="in"></td>
+            <td><input id="btn" type=button value="8" class="in"></td>
+            <td><input id="btn" type=button value="9" class="in"></td>
+            <td><input type=button value="*" class="op in"></td>
+        </tr>
+        <tr>
+            <td><input id="btn" type=button value="4" class="in"></td>
+            <td><input id="btn" type=button value="5" class="in"></td>
+            <td><input id="btn" type=button value="6" class="in"></td>
+            <td><input type=button value="-" class="op in"></td> 
+        </tr>
+        <tr>
+            <td><input id="btn" type=button value="1" class="in"></td>
+            <td><input id="btn" type=button value="2" class="in"></td>
+            <td><input id="btn" type=button value="3" class="in"></td>
+            <td><input type=button value="+" class="op in"></td> 
+        </tr>
+        <tr>
+            <td><input id="btn" type=button value="00" class="in"></td>
+            <td><input id="btn" type=button value="0" class="in"></td>
+            <td><input id="btn" type=button value="." class="in"></td>
+            <td><input type=button value="=" class="eql" onclick="solve()"></td>
+        </tr>
+        </tbody>
+   </table>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

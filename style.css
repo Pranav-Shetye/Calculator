@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table{
+    border: 2px solid black;
+    border-radius: 16px;
+    height: 415px;
+    width: 300px;
+}
+
+#equation{
+    height: 110px;
+    width: 100%;
+    margin-top: 10px;
+    border: none;
+    font-size:45px;
+    text-align: right;
+}
+
+#btn{
+   background-color: whitesmoke;
+   border: none;
+   height: 50px;
+   width: 50px;
+   font-size: 30px;
+   border-radius: 50%;
+   margin-left: 11px;
+}
+
+.allclear{
+   background-color: whitesmoke;
+   color: red;
+   border: none;
+   height: 50px;
+   width: 50px;
+   font-size: 25px;
+   border-radius: 50%;
+   margin-left: 11px;
+}
+
+.clear{
+   background-color: whitesmoke;
+   color: green;
+   border: none;
+   height: 50px;
+   width: 50px;
+   font-size: 30px;
+   border-radius: 50%;
+   margin-left: 11px;
+}
+
+.op{
+   background-color: whitesmoke;
+   color: green;
+   border: none;
+   height: 50px;
+   width: 50px;
+   font-size: 30px;
+   font-weight: bold;
+   border-radius: 50%;
+   margin-left: 11px;
+}
+
+.eql{
+   background-color: green;
+   color: white;
+   border: none;
+   height: 50px;
+   width: 50px;
+   font-size: 30px;
+   font-weight: bold;
+   border-radius: 50%;
+   margin-left: 11px;
+}
